@@ -9,7 +9,6 @@ class Post(models.Model):
     text=models.TextField(blank=True, null=True)
     created_date=models.DateTimeField(default=timezone.now)
     published_date=models.DateTimeField(blank=True, null=True)
-    image=models.ImageField(upload_to='sports',blank=True,null=True)
     location=models.CharField(max_length=200,blank=True,null=True)
     sport=models.CharField(max_length=200,blank=True,null=True)
     duration=models.DurationField(blank=True,null=True)
