@@ -2,6 +2,8 @@
 {% load  static %}
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name='viewport' content='width=device-width'> 
     <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
         <title>Sportdiary</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -9,11 +11,28 @@
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
     <body>
-        <div class="page-header">
-            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ Sportdiary }}</a></h1>
-        </div>
+        <header>
+            <div class="page-header">   
+                <div id="branding">
+                    <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ Sportdiary }}</a></h1>
+                </div>
+                <nav>
+                    <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
-       <div class="content container">
+        <section id="showcase">
+            <div class="container">
+            <h1>18.Juli.2019</h1>
+            </div>
+        </section>
+
+        <div class="content container">
              <div class="row">
                  <div class="col-md-8">
                    
