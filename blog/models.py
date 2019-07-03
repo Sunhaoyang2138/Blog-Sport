@@ -9,9 +9,11 @@ class Post(models.Model):
     text=models.TextField(blank=True, null=True)
     created_date=models.DateTimeField(default=timezone.now)
     published_date=models.DateTimeField(blank=True, null=True)
-    location=models.CharField(max_length=200,blank=True,null=True)
-    sport=models.CharField(max_length=200,blank=True,null=True)
-    duration=models.DurationField(blank=True,null=True)
+    image=models.ImageField(upload_to='sports',blank=False,null=True)
+    location=models.CharField(max_length=200,blank=False,null=True)
+    sportart=models.CharField(max_length=200,blank=False,null=True)
+    duration=models.DurationField(blank=False,null=True)
+    length=models.IntegerField(blank=False, null=True)
 
     def publish(self):
         self.published_date=timezone.now()
