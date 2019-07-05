@@ -6,9 +6,9 @@ from django.utils import timezone
 class Post(models.Model):
     author=models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
     title=models.CharField(max_length=200)
-    sportart=models.CharField(max_length=200)
+    sportart=models.CharField(max_length=200,blank=True,null=True)
     location=models.CharField(max_length=200,blank=True,null=True)
-    duration=models.DurationField(blank=True,null=True)
+    duration=models.CharField(max_length=200,blank=True,null=True)
     length=models.IntegerField(blank=True, null=True)
     image=models.ImageField(upload_to='sports',blank=True,null=True)
     text=models.TextField(blank=True, null=True)
