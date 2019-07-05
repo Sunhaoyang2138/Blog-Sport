@@ -1,16 +1,15 @@
 
 .page-header {
-    background-color: #87CEEB;
+    background-color: #66A1B8;
     margin-top: 0;
     padding: 20px 20px 20px 40px;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: #412414;
-    text-align:center;
-    font-size: 18pt;
+    color:#1B1B1B;
+    font-size: 36pt;
     text-decoration: none;
-    font-family: 'Russo One', sans-serif;
+    font-family: 'Monoton', cursive;
 }
 
 .content {
@@ -18,16 +17,13 @@
 }
 
 h3, h4 {
-    font-family: 'ZCOOL XiaoWei', serif;
+    font-family: 'Dosis', sans-serif;
     color: #828282;
 }
 
 h2{
-  font-family: 'ZCOOL KuaiLe', cursive;
-}
-
-h1{
-  font-family: 'Bahianita', cursive;
+    font-family: 'Changa', sans-serif;
+    color: #828282;
 }
 
 .date {
