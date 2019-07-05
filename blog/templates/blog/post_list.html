@@ -3,15 +3,9 @@
 <html>
     <head>
         <meta charset="UTF-8">
-<<<<<<< HEAD
-        <meta name='viewport' content='width=device-width'>
-    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-        <title>My Sport Diary</title>
-=======
-        <meta name='viewport' content='width=device-width, initial-scale=1.0'/> 
-    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+        <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
         <title>Sportdiary</title>
->>>>>>> 9cb4642a7c96d9716c5b69da10689224d6ce0452
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
@@ -55,7 +49,7 @@
         </header>
 
         <section id="showcase">
-            <div class="container">
+            <div class="container", style="background-color:#FFA500;clear:both;text-align:center;>
             <h1>18.Juli.2019</h1>
             </div>
         </section>
@@ -63,38 +57,29 @@
         <div class="content container">
              <div class="row">
                  <div class="col-md-8">
+                        {% for post in posts %}
+                                    {% if user.is_authenticated %}
+                                        <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+                                    {% endif %}
 
-                     {% block content %}
-                         {% for post in posts %}
-                            <div class="post">
-                                {% if post.published_date %}
-                                    <div class="date">
-                                        {{ post.published_date }}
-                                    </div>
-                                {% endif %}
+                                    <h2>{{ post.title }}</h2>
+                                    <p>Sport_Type:<em>{{ post.sportart }}</em></p>
+                                    <p>Location:</p><em>{{ post.location }}</em>
+                                    <p>Duration:</p><em>{{ post.duration }}</em>
+                                    <p>Length:</p><em>{{ post.length }}</em>
+                                    <img src=' post.image '>
+                                    <p>{{ post.text|linebreaksbr }}</p>
+                                </div>
+                            {% endfor %}
 
-                                {% if user.is_authenticated %}
-                                    <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
-                                {% endif %}
-
-                                <h2>{{ post.title }}</h2>
-                                <em>{{ post.sportart }}</em>
-                                <em>{{ post.location }}</em>
-                                <em>{{ post.duration }}</em>
-                                <em>{{ post.length }}</em>
-                                <img src=' post.image '>
-                                <p>{{ post.text|linebreaksbr }}</p>
-                            </div>
-                         {% endfor %}
-                     {% endblock %}
-
-                  </div>
-              </div>
+                     </div>
+                </div>
+                </div>
             </div>
         </section>
 
-        <footer>
+        <div id='footer' style="background-color:#FFA500;clear:both;text-align:center;">
         <p>Sportdiary, Copyright &copy;</p>
-        </footer>
+        </div>
     </body>
 </html>

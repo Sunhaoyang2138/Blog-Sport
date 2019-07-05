@@ -6,9 +6,11 @@
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: #ffffff;
-    font-size: 36pt;
+    color: #412414;
+    text-align:center;
+    font-size: 18pt;
     text-decoration: none;
+    font-family: 'Russo One', sans-serif;
 }
 
 .content {
