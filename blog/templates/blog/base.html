@@ -34,41 +34,30 @@
     </head>
 
 
-    <body style = "background-color: #C8D8E6">
-        <header>
-            <div class="page-header">
-                <div id="branding">
-                    <h1><a href="{% url 'post_detail' pk=post.pk %}">{{My Sport Diary)}</a></h1>
-                </div>
-                <nav>
-                    <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Services</li>
-                    </ul>
-                </nav>
+    <body style = "background-color: #C8D8E6;text-align: justify;">
+        <div class="page-header" style = "background-color:#FEA16F;text-align: justify;">
+            <div id="branding" >
+                {% if user.is_authenticated %}
+                    <a href="{% url 'post_new' %}" class="top-menu"><span style="color: #FFFFFF" class="glyphicon glyphicon-edit"></span></a>
+                {% endif %}
+                <h1><a href="{% url 'post_list' %}" style="color: #FFFFFF">My Sport Diary</a></h1>
             </div>
-        </header>
-
-        <div class="container", style="background-color:#FFA500;clear:both;text-align:center;>
+            
+        <div style = "background-color: #D4E4F7;border-radius: 25px;">
             <h3>18.Juli.2019</h3>
         </div>
-
-        <div class="page-header">
-          {% if user.is_authenticated %}
-              <a href="{% url 'post_new' %}" class="top-menu"><span style="color: #1B1B1B" class="glyphicon glyphicon-edit"></span></a>
-          {% endif %}
-
-          <h1><a href="/">My Sport Diary</a></h1>
-          <h2><a href="/">to my files</a></h2>
         </div>
 
-        <div class="container">
+        <div class="container", style="background-color:#FEA16F;clear:both;">
+            
+        </div>
+
+            <div class="container">
                 {% block content %}
                 {% endblock %}
-         </div>
+             </div>
         
-        <div id='footer' style="background-color:#FFA500;clear:both;text-align:center;">
+        <div id='footer' style="background-color:#FEA16F;clear:both;text-align:center;">
         <p>Sportdiary, Copyright &copy;</p>
         </div>
     </body>

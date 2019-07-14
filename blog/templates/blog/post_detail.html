@@ -19,7 +19,7 @@
         <p>Location: <em>{{ post.location }}</em></p>
         <p>Duration: <em>{{ post.duration }}</em></p>
         <p>Length: <em>{{ post.length }}</em></p>
-        <p><img src=' post.image '></p>
+        <img src="{{ post.image.url}}" alt="{{ post.title }}">
         <h3>{{ post.text|linebreaksbr }}</h3>
     </div>
 {% endblock %}

@@ -1,12 +1,12 @@
 
 .page-header {
-    background-color: #66A1B8;
+    background-color: #FEA16F;
     margin-top: 0;
     padding: 20px 20px 20px 40px;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color:#1B1B1B;
+    color:#FFFFFF;
     font-size: 36pt;
     text-decoration: none;
     font-family: 'Monoton', cursive;
@@ -17,12 +17,12 @@
 }
 
 h3, h4 {
-    font-family: 'Dosis', sans-serif;
-    color: #828282;
+    font-family: 'Monoton', cursive;
+    color: #FEA16F;
 }
 
 h2{
-    font-family: 'Changa', sans-serif;
+    font-family: 'Monoton', cursive;
     color: #828282;
 }
 

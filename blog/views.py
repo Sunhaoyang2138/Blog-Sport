@@ -5,6 +5,7 @@ from blog.models import Post
 from django.shortcuts import render, get_object_or_404
 from .forms import PostForm
 from django.shortcuts import redirect
+from django.core.files.storage import FileSystemStorage
 
 # Create your views here.
 
@@ -15,15 +16,10 @@ def post_list (request):
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'blog/post_detail.html', {'post': post})
-    Post.objects.get(pk=pk)
-
-def post_new(request):
-    form = PostForm()
-    return render(request, 'blog/post_edit.html', {'form': form})
 
 def post_new(request):
     if request.method == "POST":
-        form = PostForm(request.POST)
+        form = PostForm(request.POST, request.FILES)
         if form.is_valid():
             post = form.save(commit=False)
             post.author = request.user

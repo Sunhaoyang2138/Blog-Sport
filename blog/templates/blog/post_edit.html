@@ -2,8 +2,15 @@
 
 {% block content %}
     <h2>New post</h2>
-    <form method="POST" class="post-form">{% csrf_token %}
-        {{ form.as_p }}
+    <form method="POST" enctype="multipart/form-data" class="post-form">
+        {% csrf_token %}
+        {{ form.as_p }}"
         <button type="submit" class="save btn btn-default">Save</button>
     </form>
+
+    {% if uploaded_file_url %}
+        <p><a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+    {% endif %}
+
+    <p><a href="{% url '' %}">Back</a></p>
 {% endblock %}
