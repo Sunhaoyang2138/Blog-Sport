@@ -7,8 +7,10 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link rel="stylesheet" href="{% static 'css/min.css' %}">
         <link href="//fonts.googleapis.com/css?family=Monoton|Changa|Just+Another+Hand|Russo+One|Dosis|Permanent+Marker|Satisfy|Shadows+Into+Light|Indie+Flower|Sniglet=swap" rel="stylesheet" type="text/css">
-
+        <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Catamaran&display=swap" rel="stylesheet">
     <style>
         /* For desktop: */
         .col-1 {width: 8.33%;}
@@ -30,12 +32,13 @@
                  width: 100%;
             }
         }
+
      </style>
     </head>
 
 
-    <body style = "background-color: #C8D8E6;text-align: justify;">
-        <div class="page-header" style = "background-color:#FEA16F;text-align: justify;">
+    <body style = "background-color: #f5f1e7;text-align: justify;">
+        <div class="page-header" style = "background-color:#dfd2b1;text-align: justify;">
             <div id="branding" >
                 {% if user.is_authenticated %}
                     <a href="{% url 'post_new' %}" class="top-menu"><span style="color: #FFFFFF" class="glyphicon glyphicon-edit"></span></a>
@@ -43,21 +46,28 @@
                 <h1><a href="{% url 'post_list' %}" style="color: #FFFFFF">My Sport Diary</a></h1>
             </div>
             
-        <div style = "background-color: #D4E4F7;border-radius: 25px;">
-            <h3>18.Juli.2019</h3>
+        <div style = "background-color: #f5f1e7;border-radius: 25px;">
+            <h3 style="color:#f5cd7d;">18.Juli.2019</h3>
         </div>
         </div>
 
-        <div class="container", style="background-color:#FEA16F;clear:both;">
-            
-        </div>
+<!--        <div class="container", style="background-color:#FEA16F;clear:both;">-->
+<!--            -->
+<!--        </div>-->
 
             <div class="container">
-                {% block content %}
-                {% endblock %}
+                <div class="row">
+                    <div class="blog-list">
+                        {% block content %}
+                        {% endblock %}
+
+                    </div>
+
+                </div>
+
              </div>
         
-        <div id='footer' style="background-color:#FEA16F;clear:both;text-align:center;">
+        <div id='footer' style="background-color:#dfd2b1;clear:both;text-align:center;">
         <p>Sportdiary, Copyright &copy;</p>
         </div>
     </body>
