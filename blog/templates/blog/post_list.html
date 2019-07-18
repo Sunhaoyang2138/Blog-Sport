@@ -3,25 +3,7 @@
 
 {% block content %}
 {% for post in posts %}
-<!--    <div class="list">-->
-<!--        {% if user.is_authenticated %}-->
-<!--            <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>-->
-<!--        {% endif %}-->
 
-<!--        <div class="list_contetn">-->
-<!--            <h2>{{ post.title }}</h2>-->
-<!--            <p>Sport_Type: <em>{{ post.sportart }}</em></p>-->
-<!--            <p>Location: <em>{{ post.location }}</em></p>-->
-<!--            <p>Duration: <em>{{ post.duration }}</em></p>-->
-<!--            <p>Length: <em>{{ post.length }}</em></p>-->
-<!--            {% if post.image %}-->
-<!--                <img src="{{ post.image.url}}" alt="{{ post.title }}">-->
-<!--            {% endif %}-->
-<!--            <h3>{{ post.text|linebreaksbr }}</h3>-->
-
-<!--        </div>-->
-
-<!--    </div>-->
             <div class="col-md-3 col-sm-3 col-xs-6">
                 <div class="blog-list-item">
         {% if user.is_authenticated %}
