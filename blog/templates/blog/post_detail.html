@@ -13,15 +13,15 @@
             <a class="top-menu"  style="float: none;" href="{% url 'post_edit' pk=post.pk %}"><span style="color: #aaaaaa" class="glyphicon glyphicon-edit"></span></a>
         {% endif %}
 
-     <div style="word-break: break-word;">
-        <h2 style="font-family: 'Bree Serif', serif;">{{ post.title }}</h2>
-        <p style="font-family: 'Catamaran', sans-serif;">Sport_Type: <em>{{ post.sportart }}</em></p>
-        <p style="font-family: 'Catamaran', sans-serif;">Location: <em>{{ post.location }}</em></p>
-        <p style="font-family: 'Catamaran', sans-serif;">Duration: <em>{{ post.duration }}</em></p>
-        <p style="font-family: 'Catamaran', sans-serif;">Length: <em>{{ post.length }}</em></p>
+     <div style="word-break: break-word; font-family: 'Source Sans Pro', sans-serif;">
+        <h2 style="font-family: 'Oswald', sans-serif; color: #4AADCD; front-size: 24pt" >{{ post.title }}</h2>
+        <p style="font-family: 'Source Sans Pro', sans-serif;">Sport Type: <em>{{ post.sportart }}</em></p>
+        <p style="font-family: 'Source Sans Pro', sans-serif;">Location: <em>{{ post.location }}</em></p>
+        <p style="font-family: 'Source Sans Pro', sans-serif;">Duration: <em>{{ post.duration }}</em></p>
+        <p style="font-family: 'Source Sans Pro', sans-serif;">Length: <em>{{ post.length }}</em></p>
         {% if post.image %}
             <img src="{{ post.image.url}}" alt="{{ post.title }}">
         {% endif %}
-        <h3 style="font-family: 'Catamaran', sans-serif;">{{ post.text|linebreaksbr }}</h3>
+        <h3 style="font-family: 'Source Sans Pro', sans-serif;">{{ post.text|linebreaksbr }}</h3>
     </div>
 {% endblock %}

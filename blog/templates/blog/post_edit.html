@@ -1,16 +1,16 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-    <h2 style="font-family: 'Bree Serif', serif;">New post</h2>
+    <h2 style="font-family: 'Oswald', sans-serif; color: #000000">New post</h2>
     <form method="POST" enctype="multipart/form-data" >
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Save</button>
+        <button type="submit" class="save btn btn-default" style="margin-left: 10px">Save</button>
     </form>
 
     {% if uploaded_file_url %}
         <p><a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
     {% endif %}
 
-    <p><a href="{% url 'post_list' %}">Back</a></p>
+    <p><a href="{% url 'post_list' %}" style="font-family: 'Oswald', sans-serif; color: #000000">Back</a></p>
 {% endblock %}

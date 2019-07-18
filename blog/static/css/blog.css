@@ -1,15 +1,15 @@
 
 .page-header {
-    background-color: #FEA16F;
+    background-color: #F6E652;
     margin-top: 0;
-    padding: 20px 20px 20px 40px;
+    padding: 20px 20px 20xpx 40px;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
     color:#FFFFFF;
     font-size: 36pt;
-    text-decoration: none;
-    font-family: 'Monoton', cursive;
+    text-decoration: bold;
+    font-family: 'Playfair Display', serif;
 }
 
 .content {
@@ -17,21 +17,21 @@
 }
 
 h3, h4 {
-    font-family: 'Monoton', cursive;
-    color: #FEA16F;
+    font-family: 'Oswald', sans-serif;
+    color: #F6E652;
 }
 
 h2{
-    font-family: 'Monoton', cursive;
-    color: #828282;
+    color: #F6E652; 
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .date {
-    color: #828282;
+    color: #F6E652;
 }
 
 .save {
-    float: right;
+    float: center;
 }
 
 .post-form textarea, .post-form input {
